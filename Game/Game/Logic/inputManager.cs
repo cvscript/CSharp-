@@ -1,5 +1,8 @@
 ﻿namespace GameTans.Lec03_CmdGame
 {
-    public class inputManager { }
+    public class InputManager
+    {
+        public static Vector2 inputVec;
+    }
     
 }

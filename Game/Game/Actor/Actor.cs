@@ -25,6 +25,7 @@ namespace GameTans.Lec03_CmdGame
         public void AddComponent(Component component)
         {
             components.Add(component);
+            component.Bind(this);
             component.Awake();
         }
         public void Awake()

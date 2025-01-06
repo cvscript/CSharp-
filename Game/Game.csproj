@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\Util\Driver.cs" />
     <Compile Include="Game\Util\Debug.cs" />
     <Compile Include="Game\Component\AI.cs" />
     <Compile Include="Game\Component\EnemyAI.cs" />

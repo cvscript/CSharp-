@@ -31,9 +31,9 @@ namespace GameTans.Lec03_CmdGame
                 //  0     10   20   // 显示列
          
                 var helfColCount = (ColCount - 1) / 2;
-                var row = item.pos.x + helfColCount;
+                var col = item.pos.x + helfColCount;
                 var helfRowCount = (RowCount - 1) / 2;
-                var col = item.pos.y + helfRowCount;
+                var row = item.pos.y + helfRowCount;
                 // item.color 值 受伤为负数 isHurt = -1;
                 mapData[row, col] = item.color * item.type;
             }

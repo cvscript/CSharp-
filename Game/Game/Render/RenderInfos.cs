@@ -9,6 +9,7 @@ namespace GameTans.Lec03_CmdGame
         {
             infos.Add(info);
         }
+        // IEnumerable 是一个泛型接口，它表示一个可以通过 IEnumerator 迭代器进行枚举的集合。
         public void AddExtInfos<T>(IEnumerable<T> objs)
         {
             foreach (var item in objs)

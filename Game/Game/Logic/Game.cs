@@ -38,7 +38,7 @@ namespace GameTans.Lec03_CmdGame
             actor.damage = health;
             actor.health = damage;
             actor.pos = world.GetRandomPos();
-       
+
             actor.AddComponent(new HurtEffect());
             actor.AddComponent(new Skill());
 
@@ -46,11 +46,35 @@ namespace GameTans.Lec03_CmdGame
 
         public void Update()
         {
-            
-            Time.deltaTime = 0.1f;
+
             Debug.Log($"{GetType().Name} Update FrameCount:{Time.frameCount}");
             world.Update();
             Time.frameCount++;
+        }
+        public bool OnUpdate(double timeSinceStart, double deltaTime)
+        {
+            Time.deltaTime = (float)deltaTime;
+            Update();
+            return false;
+        }
+      
+        public void OnGetInput(char inputCh)
+        {
+            switch (inputCh)
+            {
+                case 'w':
+                    InputManager.inputVec = new Vector2(0, 1); 
+                    break;
+                case 's':
+                    InputManager.inputVec = new Vector2(0, -1);
+                    break;
+                case 'a':
+                    InputManager.inputVec = new Vector2(0 ,-1);
+                    break;
+                case 'd':
+                    InputManager.inputVec = new Vector2(1, 0);
+                    break;
+            }
         }
     }
 
